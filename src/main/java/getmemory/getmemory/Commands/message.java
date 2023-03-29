@@ -12,11 +12,11 @@ public class message implements CommandExecutor {
         if (command.getName().equalsIgnoreCase("jvm")) {
             Runtime runtime = Runtime.getRuntime();
             long memoryUsed = runtime.totalMemory() - runtime.freeMemory();
-            long memoryUsed_GB = memoryUsed / 1048576;
+            long memoryUsed_MB = memoryUsed / 1048576;
             long freeMemory = runtime.maxMemory() - memoryUsed;
-            long freeMemory_GB = freeMemory / 1048576;
-            sender.sendMessage("Memory used: " + memoryUsed_GB + " MB.");
-            sender.sendMessage("Free memory: " + freeMemory_GB + " MB.");
+            long freeMemory_MB = freeMemory / 1048576;
+            sender.sendMessage("Memory used: " + memoryUsed_MB + " MB.");
+            sender.sendMessage("Free memory: " + freeMemory_MB + " MB.");
             return true;
         }
         return false;
