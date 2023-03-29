@@ -1,0 +1,9 @@
+name: GetMemory
+version: '${project.version}'
+main: getmemory.getmemory.GetMemory
+api-version: 1.18
+
+commands:
+  jvm:
+    description: JVM使用メモリ使用量と空き容量を表示
+    usage: /jvm
